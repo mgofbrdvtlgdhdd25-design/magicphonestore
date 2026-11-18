@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title id="siteMetaTitle">MAGIC PHONE STORE | ماجيك فون ستور فيصل للإلكترونيات والموبايلات</title>
+<meta name="description" id="siteMetaDesc" content="متجر MAGIC PHONE STORE - أحدث الموبايلات (آيفون، أوبو، سامسونج، شاومي)، شواحن، وصلات، سماعات، وإيربودز في 35 شارع المنشية الطوابق فيصل. بيع كاش فوري فقط.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='5' y='5' width='90' height='90' rx='22' fill='%230f172a'/><rect x='28' y='18' width='44' height='64' rx='8' stroke='%23e11d48' stroke-width='5' fill='none'/><path d='M54 30 L40 50 L49 50 L45 70 L60 48 L51 48 Z' fill='%23d97706'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root {
+  --primary: #0f172a;
+  --secondary: #1e293b;
+  --accent: #e11d48;
+  --accent-hover: #be123c;
+  --gold: #d97706;
+  --bg: #ffffff;
+  --card-bg: #ffffff;
+  --subtle-bg: #f8fafc;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-dark: #cbd5e1;
+  --green: #10b981;
+  --wa: #25D366;
+  --shadow-sm: 0 2px 10px rgba(15,23,42,0.04);
+  --shadow-md: 0 8px 24px rgba(15,23,42,0.06);
+  --shadow-lg: 0 16px 36px rgba(15,23,42,0.09);
+  --radius: 14px;
+}
+
+/* LTR adjustments when English is selected */
+html[dir="ltr"] { direction: ltr; text-align: left; }
+html[dir="ltr"] body { text-align: left; }
+html[dir="ltr"] .top-ticker-items { flex-direction: row; }
+html[dir="ltr"] .product-card .card-badge { right: auto; left: 10px; }
+html[dir="ltr"] .product-card .stock-pill { left: auto; right: 10px; }
+html[dir="ltr"] .cart-drawer { left: auto; right: -420px; transition: right .35s cubic-bezier(0.16, 1, 0.3, 1); }
+html[dir="ltr"] .cart-drawer.open { right: 0; left: auto; }
+html[dir="ltr"] .search-container input { padding: 11px 18px 11px 45px; }
+html[dir="ltr"] .search-container .search-icon { right: auto; left: 16px; }
+
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Cairo', sans-serif; -webkit-tap-highlight-color: transparent; }
+
+body { background: var(--bg); color: var(--text); line-height: 1.6; padding-bottom: 75px; min-height: 100vh; }
+a { text-decoration: none; color: inherit; }
+
+.caps { text-transform: uppercase !important; letter-spacing: 0.5px; }
+.logo span, .hero-tag, .product-brand, .chip-btn, .nav-tab span, .cat-nav-btn { text-transform: uppercase; }
+
+/* Top Announcement Bar */
+.top-ticker {
+  background: #0f172a;
+  color: #fff;
+  font-size: 0.82rem;
+  padding: 9px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+}
+.top-ticker-items { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+.top-ticker-items span { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Sticky Header */
+header { background: #ffffff; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow-sm); border-bottom: 1px solid var(--border); }
+.header-main { display: flex; align-items: center; justify-content: space-between; padding: 14px 5%; gap: 15px; }
+
+.logo { display: flex; align-items: center; gap: 12px; font-size: 1.35rem; font-weight: 900; color: var(--primary); letter-spacing: -0.5px; }
+.logo-svg { width: 46px; height: 46px; flex-shrink: 0; transition: transform .3s; }
+.logo:hover .logo-svg { transform: scale(1.06) rotate(-3deg); }
+.logo span { color: var(--accent); font-weight: 900; }
+
+.search-container { flex: 1; max-width: 500px; position: relative; }
+.search-container input {
+  width: 100%;
+  padding: 11px 45px 11px 18px;
+  border: 1.5px solid var(--border);
+  border-radius: 50px;
+  background: #f8fafc;
+  outline: none;
+  font-size: 0.9rem;
+  transition: all 0.25s;
+}
+.search-container input:focus { background: #fff; border-color: var(--accent); box-shadow: 0 0 0 4px rgba(225,29,72,0.1); }
+.search-container .search-icon { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 1rem; }
+
+.header-btns { display: flex; align-items: center; gap: 10px; }
+
+.lang-btn {
+  background: #f1f5f9;
+  border: 1.5px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: .2s;
+}
+.lang-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+.cart-trigger {
+  position: relative;
+  background: #ffffff;
+  border: 1.5px solid var(--border);
+  padding: 9px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--primary);
+  transition: .2s;
+}
+.cart-trigger:hover { background: #fff1f2; border-color: var(--accent); color: var(--accent); }
+.badge { background: var(--accent); color: #fff; border-radius: 50px; padding: 2px 7px; font-size: 0.75rem; font-weight: 800; }
+
+/* Desktop Navigation Menu */
+nav.desktop-nav { background: #ffffff; padding: 0 5%; overflow-x: auto; white-space: nowrap; scrollbar-width: none; border-bottom: 1px solid var(--border); }
+nav.desktop-nav::-webkit-scrollbar { display: none; }
+nav.desktop-nav ul { display: flex; list-style: none; gap: 4px; }
+nav.desktop-nav a {
+  display: inline-block;
+  color: var(--secondary);
+  padding: 12px 14px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+nav.desktop-nav a:hover, nav.desktop-nav a.active { color: var(--accent); border-color: var(--accent); background: #fdf2f4; }
+
+/* Sub-nav Category Pills */
+.sub-nav-bar {
+  background: #f8fafc;
+  padding: 10px 5%;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+.sub-nav-bar::-webkit-scrollbar { display: none; }
+.cat-nav-btn {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  padding: 7px 15px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all .2s;
+}
+.cat-nav-btn:hover, .cat-nav-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+.cat-nav-btn i { color: var(--accent); }
+.cat-nav-btn.active i, .cat-nav-btn:hover i { color: #fff; }
+
+/* Dedicated Page Banners */
+.page-banner {
+  background: #ffffff;
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  padding: 30px;
+  color: var(--primary);
+  margin-bottom: 25px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-banner-content { max-width: 650px; z-index: 2; }
+.page-banner-badge {
+  display: inline-block;
+  background: #fee2e2;
+  color: var(--accent);
+  border: 1px solid #fecdd3;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.page-banner-title { font-size: 1.9rem; font-weight: 900; margin-bottom: 8px; line-height: 1.3; }
+.page-banner-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
+.page-banner-icon { font-size: 6.5rem; color: #f1f5f9; position: absolute; left: 25px; top: 50%; transform: translateY(-50%); pointer-events: none; }
+
+/* Breadcrumbs */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb i { font-size: 0.7rem; }
+
+/* Hero Slider (Home) */
+.hero-slider { margin: 10px 0 24px; position: relative; }
+.hero-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  color: var(--primary);
+  padding: 38px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.hero-content { max-width: 620px; z-index: 2; }
+.hero-tag {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.hero-title { font-size: 2.1rem; font-weight: 900; line-height: 1.25; margin-bottom: 10px; color: var(--primary); }
+.hero-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 22px; }
+.hero-btn {
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 800;
+  padding: 12px 26px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: .25s;
+}
+.hero-btn:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(225,29,72,0.25); }
+.hero-glow {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11rem;
+  color: #f1f5f9;
+  pointer-events: none;
+}
+
+/* Features Strip */
+.features-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-bottom: 25px; }
+.feature-item {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow-sm);
+}
+.feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #fee2e2;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.feature-text h4 { font-size: 0.92rem; font-weight: 800; color: var(--primary); margin-bottom: 2px; }
+.feature-text p { font-size: 0.78rem; color: var(--text-muted); }
+
+/* Product Grid & Cards */
+.section { padding: 0; margin-bottom: 35px; }
+.section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; border-bottom: 2px solid var(--border); padding-bottom: 10px; }
+.section-title { font-size: 1.3rem; font-weight: 900; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+.section-title::before { content:''; display:inline-block; width:6px; height:22px; background:var(--accent); border-radius:3px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(225px, 1fr)); gap: 18px; }
+
+.product-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-sm);
+}
+.product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--border-dark); }
+
+.card-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--accent);
+  color: #fff;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  z-index: 2;
+}
+.stock-pill {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ecfdf5;
+  color: var(--green);
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 6px;
+  border: 1px solid #a7f3d0;
+  z-index: 2;
+}
+
+.product-img-wrap {
+  width: 100%;
+  height: 185px;
+  background: #f8fafc;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 12px;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #f1f5f9;
+}
+.product-img-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; transition: transform .3s; }
+.product-card:hover .product-img-wrap img { transform: scale(1.06); }
+
+.product-brand { font-size: 0.75rem; color: var(--text-muted); font-weight: 800; text-transform: uppercase; margin-bottom: 4px; }
+.product-name {
+  font-size: 0.93rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.4;
+  height: 2.8em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 8px;
+}
+
+.price-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.current-price { font-size: 1.25rem; font-weight: 900; color: var(--accent); }
+.old-price { font-size: 0.85rem; color: var(--text-muted); text-decoration: line-through; }
+
+.cash-only-note {
+  font-size: 0.75rem;
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 800;
+}
+
+.card-actions { margin-top: auto; display: flex; flex-direction: column; gap: 6px; }
+.btn-add-cart {
+  width: 100%;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 9px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: .2s;
+}
+.btn-add-cart:hover { background: var(--accent); }
+
+.btn-quick-wa {
+  width: 100%;
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  padding: 7px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.82rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: .2s;
+}
+.btn-quick-wa:hover { background: var(--wa); color: #fff; border-color: var(--wa); }
+
+.btn-share-wa {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  color: var(--secondary);
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.btn-share-wa:hover { background: #dcfce7; color: #15803d; border-color: #86efac; }
+
+/* Trade-In Calculator Box */
+.trade-in-card {
+  background: #ffffff;
+  border: 2px dashed var(--accent);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 30px;
+}
+
+/* Single Product Detail Page */
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 30px;
+}
+.product-gallery {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  min-height: 380px;
+}
+.product-gallery img { max-width: 100%; max-height: 360px; object-fit: contain; }
+
+.product-specs-list {
+  list-style: none;
+  margin: 15px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.product-specs-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #334155;
+  background: #f8fafc;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+.product-specs-list li i { color: var(--accent); }
+
+/* Cart Drawer */
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 2500; opacity: 0; pointer-events: none; transition: .3s; }
+.overlay.active { opacity: 1; pointer-events: all; }
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  left: -420px;
+  width: 390px;
+  max-width: 90vw;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 10px 0 35px rgba(0,0,0,0.2);
+  z-index: 2600;
+  transition: left .35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+.cart-drawer.open { left: 0; }
+.cart-header { padding: 18px; background: var(--primary); color: #fff; display: flex; justify-content: space-between; align-items: center; }
+.cart-header h3 { font-size: 1.1rem; display: flex; align-items: center; gap: 8px; }
+.close-drawer { background: none; border: none; color: #fff; font-size: 1.6rem; cursor: pointer; }
+
+.cart-items-body { flex: 1; overflow-y: auto; padding: 16px; }
+.cart-row { display: flex; gap: 12px; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 14px; margin-bottom: 14px; }
+.cart-row-img { width: 65px; height: 65px; background: #f8fafc; border-radius: 8px; object-fit: contain; padding: 4px; border: 1px solid var(--border); }
+.cart-row-info { flex: 1; }
+.cart-row-title { font-weight: 700; font-size: 0.85rem; color: var(--primary); margin-bottom: 4px; }
+.cart-row-price { font-weight: 800; color: var(--accent); font-size: 0.95rem; }
+.qty-controls { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.qty-btn { width: 26px; height: 26px; border: 1px solid var(--border); background: #f8fafc; border-radius: 6px; font-weight: 800; cursor: pointer; }
+.qty-val { font-weight: 700; font-size: 0.9rem; }
+
+.cart-footer { padding: 16px; background: #f8fafc; border-top: 1px solid var(--border); }
+.summary-line { display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 8px; font-size: 0.95rem; }
+.total-line { display: flex; justify-content: space-between; font-weight: 900; font-size: 1.25rem; color: var(--accent); margin-bottom: 15px; border-top: 1px dashed var(--border); padding-top: 10px; }
+.btn-checkout {
+  width: 100%;
+  background: var(--wa);
+  color: #fff;
+  border: none;
+  padding: 13px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: .2s;
+}
+.btn-checkout:hover { background: #1eb954; }
+
+/* Mobile Bottom Fixed Nav Bar */
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.06);
+  z-index: 1200;
+  padding: 8px 10px;
+  justify-content: space-around;
+}
+.nav-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  gap: 3px;
+  position: relative;
+  cursor: pointer;
+}
+.nav-tab i { font-size: 1.2rem; }
+.nav-tab.active, .nav-tab:hover { color: var(--accent); }
+.nav-tab .tab-badge { position: absolute; top: -4px; right: 8px; background: var(--accent); color: #fff; font-size: 0.65rem; border-radius: 50%; padding: 1px 5px; }
+
+/* General Pages */
+.page { display: none; padding: 25px 5%; }
+.page.active { display: block; animation: fadeIn .2s ease-in; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.info-card { background: #ffffff; border: 1px solid var(--border); border-radius: 16px; padding: 25px; margin-bottom: 20px; box-shadow: var(--shadow-sm); }
+form label { font-size: 0.85rem; font-weight: 800; margin-bottom: 5px; display: block; color: var(--secondary); }
+form input, form select, form textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  outline: none;
+  background: #ffffff;
+}
+form input:focus, form select:focus, form textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(225,29,72,0.1); }
+
+/* Floating WhatsApp Button */
+.wa-float {
+  position: fixed;
+  bottom: 85px;
+  left: 20px;
+  background: var(--wa);
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+  z-index: 1100;
+  transition: transform .2s;
+}
+.wa-float:hover { transform: scale(1.08); }
+html[dir="ltr"] .wa-float { left: auto; right: 20px; }
+
+/* Footer */
+footer { background: #0f172a; color: #cbd5e1; padding: 45px 5% 30px; margin-top: 40px; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 30px; }
+footer h3 { color: #fff; font-size: 1.15rem; margin-bottom: 14px; position: relative; padding-bottom: 8px; text-transform: uppercase; }
+footer h3::after { content:''; position: absolute; right: 0; bottom: 0; width: 35px; height: 3px; background: var(--accent); border-radius: 2px; }
+html[dir="ltr"] footer h3::after { right: auto; left: 0; }
+footer ul { list-style: none; }
+footer li { margin-bottom: 9px; font-size: 0.88rem; }
+.copy { text-align: center; border-top: 1px solid #1e293b; padding-top: 20px; font-size: 0.82rem; color: #94a3b8; }
+
+@media (max-width: 850px) {
+  .product-detail-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-bar { display: flex; }
+  .desktop-nav { display: none; }
+  .hero-card { padding: 25px 20px; }
+  .hero-title { font-size: 1.55rem; }
+  .hero-glow { display: none; }
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .product-card { padding: 10px; }
+  .product-img-wrap { height: 135px; }
+  .product-name { font-size: 0.82rem; height: 2.6em; }
+  .current-price { font-size: 1.05rem; }
+  .old-price { font-size: 0.75rem; }
+  .cash-only-note { font-size: 0.68rem; padding: 3px 5px; }
+  .btn-add-cart { padding: 7px; font-size: 0.8rem; }
+  .btn-quick-wa { display: none; }
+  .top-ticker { font-size: 0.75rem; flex-direction: column; gap: 4px; text-align: center; }
+  .page-banner { padding: 22px 18px; }
+  .page-banner-title { font-size: 1.45rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- 1. Top Announcement Bar -->
+<div class="top-ticker">
+  <div class="top-ticker-items">
+    <span id="storeTickerNotice"><i class="fas fa-money-bill-wave"></i> <strong class="caps">بيع كاش فوري فقط (لا يوجد تقسيط)</strong> | توصيل سريع داخل فيصل أو استلام من 35 شارع المنشية الطوابق</span>
+  </div>
+  <div class="top-ticker-items">
+    <span id="storeTickerPhone"><i class="fab fa-whatsapp"></i> واتساب ومبيعات فيصل: 01115559809</span>
+  </div>
+</div>
+
+<!-- 2. Header -->
+<header>
+  <div class="header-main">
+    <a href="#/" class="logo">
+      <!-- Custom SVG Logo -->
+      <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="92" height="92" rx="22" fill="#0f172a" stroke="#e11d48" stroke-width="3.5"/>
+        <rect x="29" y="16" width="42" height="68" rx="9" fill="none" stroke="#ffffff" stroke-width="4.5"/>
+        <line x1="44" y1="23" x2="56" y2="23" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+        <path d="M54 31 L39 51 L49 51 L45 71 L61 48 L51 48 Z" fill="#d97706"/>
+      </svg>
+      <div style="display:inline-block;line-height:1.15;">
+        <span class="caps" id="storeLogoMain" style="color:var(--primary)">MAGIC</span>
+        <span class="caps" id="storeLogoSub" style="color:var(--accent);font-weight:900;">PHONE STORE</span>
+        <div style="font-size:0.72rem;color:var(--text-muted);font-weight:700;">35 شارع المنشية - الطوابق - فيصل</div>
+      </div>
+    </a>
+
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="searchInput" placeholder="ابحث في المتجر: IPHONE، OPPO، سامسونج، شاحن..." oninput="handleSearch()">
+    </div>
+
+    <div class="header-btns">
+      <button class="lang-btn" onclick="toggleLanguage()" title="Switch Language">
+        <i class="fas fa-globe"></i>
+        <span id="langBtnText">ENGLISH</span>
+      </button>
+
+      <button class="cart-trigger" onclick="openCart()">
+        <i class="fas fa-shopping-bag" style="color:var(--accent)"></i>
+        <span class="desktop-only" id="cartLabelText">السلة</span>
+        <span class="badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Desktop Navigation Menu -->
+  <nav class="desktop-nav">
+    <ul>
+      <li><a href="#/" class="active caps" id="nav-home"><i class="fas fa-house"></i> <span class="t-nav-home">الرئيسية</span></a></li>
+      <li><a href="#/brand/iphone" class="caps" id="nav-iphone"><i class="fab fa-apple"></i> IPHONE</a></li>
+      <li><a href="#/brand/oppo" class="caps" id="nav-oppo"><i class="fas fa-mobile-screen"></i> OPPO</a></li>
+      <li><a href="#/brand/samsung" class="caps" id="nav-samsung"><i class="fas fa-mobile-screen-button"></i> SAMSUNG</a></li>
+      <li><a href="#/brand/xiaomi" class="caps" id="nav-xiaomi"><i class="fas fa-bolt"></i> XIAOMI</a></li>
+      <li><a href="#/category/chargers" class="caps" id="nav-chargers"><i class="fas fa-plug"></i> <span class="t-nav-chargers">الشواحن</span></a></li>
+      <li><a href="#/category/cables" class="caps" id="nav-cables"><i class="fas fa-link"></i> <span class="t-nav-cables">الوصلات والكابلات</span></a></li>
+      <li><a href="#/category/headphones" class="caps" id="nav-headphones"><i class="fas fa-headphones"></i> <span class="t-nav-headphones">السماعات</span></a></li>
+      <li><a href="#/category/airpods" class="caps" id="nav-airpods"><i class="fas fa-podcast"></i> AIRPODS</a></li>
+      <li><a href="#/category/watches" class="caps" id="nav-watches"><i class="fas fa-clock"></i> <span class="t-nav-watches">الساعات</span></a></li>
+      <li><a href="#/trade-in" class="caps" id="nav-trade-in" style="color:var(--gold)"><i class="fas fa-repeat"></i> <span class="t-nav-trade">بدّل جهازك</span></a></li>
+      <li><a href="#/offers" class="caps" id="nav-offers" style="color:var(--accent)"><i class="fas fa-fire"></i> <span class="t-nav-offers">عروض الكاش</span></a></li>
+      <li><a href="#/branches" class="caps" id="nav-branches"><i class="fas fa-store"></i> <span class="t-nav-faisal">فرع فيصل</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- Sub-Nav Pill Bar -->
+  <div class="sub-nav-bar">
+    <div class="cat-nav-btn active caps" onclick="location.hash='#/'"><i class="fas fa-border-all"></i> <span class="t-pill-all">كل الأقسام</span></div>
+    <div class="cat-nav-btn caps" onclick="location.hash='#/brand/iphone'"><i class="fab fa-apple"></i> IPHONE</div>
+    <div class="cat-nav-btn caps" onclick="location.hash='#/brand/oppo'"><i class="fas fa-mobile-screen"></i> OPPO</div>
+    <div class="cat-nav-btn caps" onclick="location.hash='#/brand/samsung'"><i class="fas fa-mobile-screen-button"></i> SAMSUNG</div>
+    <div class="cat-nav-btn caps" onclick="location.hash='#/brand/xiaomi'"><i class="fas fa-bolt"></i> XIAOMI</div>
+    <div class="cat-nav-btn caps" onclick="location.hash='#/category/chargers'"><i class="fas fa-plug"></i> <span class="t-nav-chargers">الشواحن</span></div>
+    <div class="cat-nav-btn caps" onclick="location.hash='#/category/cables'"><i class="fas fa-link"></i> <span class="t-nav-cables">الوصلات</span></div>
+    <div class="cat-nav-btn caps" onclick="location.hash='#/category/headphones'"><i class="fas fa-headphones"></i> <span class="t-nav-headphones">السماعات</span></div>
+    <div class="cat-nav-btn caps" onclick="location.hash='#/category/airpods'"><i class="fas fa-podcast"></i> AIRPODS</div>
+    <div class="cat-nav-btn caps" onclick="location.hash='#/category/watches'"><i class="fas fa-clock"></i> <span class="t-nav-watches">الساعات</span></div>
+    <div class="cat-nav-btn caps" onclick="location.hash='#/trade-in'" style="border-color:var(--gold)"><i class="fas fa-repeat" style="color:var(--gold)"></i> <span class="t-nav-trade">بدّل موبايلك</span></div>
+  </div>
+</header>
+
+<!-- 3. Main Content App -->
+<main id="mainApp">
+
+  <!-- PAGE: HOME -->
+  <section class="page active" id="page-home">
+    <div class="hero-slider">
+      <div class="hero-card">
+        <div class="hero-content">
+          <span class="hero-tag caps" id="heroTagText"><i class="fas fa-money-bill-wave"></i> بيع كاش فوري فقط - أسعار ملوك الكاش في فيصل</span>
+          <h1 class="hero-title" id="heroTitleText">أقوى تشكيلة أجهزة وإلكترونيات أصلية في فيصل</h1>
+          <p class="hero-desc" id="heroDescText">
+            وفر مع عروض ملوك الكاش على أجهزة IPHONE و OPPO وسامسونج وشاومي وشواحن وسماعات أصلية 100%. البيع كاش فوري فقط والتوصيل متاح داخل فيصل أو الاستلام من فرعنا بـ 35 شارع المنشية الطوابق.
+          </p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="#/offers" class="hero-btn caps"><i class="fas fa-fire"></i> تصفح عروض الكاش</a>
+            <a href="https://wa.me/201115559809" target="_blank" class="hero-btn caps" style="background:var(--wa)"><i class="fab fa-whatsapp"></i> تواصل واتساب</a>
+          </div>
+        </div>
+        <i class="fas fa-mobile-screen-button hero-glow"></i>
+      </div>
+    </div>
+
+    <div class="features-strip">
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fas fa-money-bill-1-wave"></i></div>
+        <div class="feature-text">
+          <h4>بيع كاش فوري فقط</h4>
+          <p>أقل سعر كاش في فيصل بعد الفحص الكامل</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
+        <div class="feature-text">
+          <h4>توصيل سريع داخل فيصل</h4>
+          <p>شحن منزلي لأي منطقة في فيصل والهرم</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+        <div class="feature-text">
+          <h4>أجهزة وإكسسوارات أصلية</h4>
+          <p>ضمان معتمد وفاتورة رسمية من الفرع</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fas fa-store"></i></div>
+        <div class="feature-text">
+          <h4>35 شارع المنشية الطوابق</h4>
+          <p>شرفنا بالزيارة والمعاينة المباشرة</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title t-sec-bestsellers">الأجهزة الأكثر طلباً في فرع فيصل</h2>
+        <a href="#/offers" class="t-view-all" style="font-size:0.85rem;font-weight:800;color:var(--accent)">عرض كافة المنتجات <i class="fas fa-arrow-left"></i></a>
+      </div>
+      <div class="grid" id="homeBestSellersGrid"></div>
+    </div>
+  </section>
+
+  <!-- PAGE: IPHONE -->
+  <section class="page" id="page-iphone">
+    <div class="breadcrumb"><a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i> <span>IPHONE</span></div>
+    <div class="page-banner">
+      <div class="page-banner-content">
+        <span class="page-banner-badge caps">APPLE IPHONE STORE - CASH ONLY</span>
+        <h1 class="page-banner-title caps">قسم هواتف IPHONE الأصلية (كاش فوري)</h1>
+        <p class="page-banner-desc">أحدث إصدارات آيفون متبرشمة بضمان أبل المحلي والدولي بأفضل أسعار الكاش في فيصل.</p>
+      </div>
+      <i class="fab fa-apple page-banner-icon"></i>
+    </div>
+    <div class="grid" id="gridIphone"></div>
+  </section>
+
+  <!-- PAGE: OPPO -->
+  <section class="page" id="page-oppo">
+    <div class="breadcrumb"><a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i> <span>OPPO</span></div>
+    <div class="page-banner">
+      <div class="page-banner-content">
+        <span class="page-banner-badge caps">OPPO SMARTPHONES - CASH ONLY</span>
+        <h1 class="page-banner-title caps">قسم هواتف OPPO وسلسلة RENO</h1>
+        <p class="page-banner-desc">تشكيلة أوبو كاملة بضمان الوكيل في مصر بأقوى أسعار الكاش الفوري.</p>
+      </div>
+      <i class="fas fa-mobile-screen page-banner-icon"></i>
+    </div>
+    <div class="grid" id="gridOppo"></div>
+  </section>
+
+  <!-- PAGE: SAMSUNG -->
+  <section class="page" id="page-samsung">
+    <div class="breadcrumb"><a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i> <span>SAMSUNG</span></div>
+    <div class="page-banner">
+      <div class="page-banner-content">
+        <span class="page-banner-badge caps">SAMSUNG GALAXY - CASH ONLY</span>
+        <h1 class="page-banner-title caps">قسم هواتف SAMSUNG GALAXY</h1>
+        <p class="page-banner-desc">سلسلة Galaxy S Ultra وسلسلة Galaxy A بضمان سامسونج مصر كاش فوري.</p>
+      </div>
+      <i class="fas fa-mobile-screen-button page-banner-icon"></i>
+    </div>
+    <div class="grid" id="gridSamsung"></div>
+  </section>
+
+  <!-- PAGE: XIAOMI -->
+  <section class="page" id="page-xiaomi">
+    <div class="breadcrumb"><a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i> <span>XIAOMI</span></div>
+    <div class="page-banner">
+      <div class="page-banner-content">
+        <span class="page-banner-badge caps">XIAOMI & REDMI - CASH ONLY</span>
+        <h1 class="page-banner-title caps">قسم هواتف XIAOMI و REDMI</h1>
+        <p class="page-banner-desc">أقوى مواصفات وأسرع شحن بأفضل سعر كاش في فرع فيصل.</p>
+      </div>
+      <i class="fas fa-bolt page-banner-icon"></i>
+    </div>
+    <div class="grid" id="gridXiaomi"></div>
+  </section>
+
+  <!-- PAGE: CHARGERS -->
+  <section class="page" id="page-chargers">
+    <div class="breadcrumb"><a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i> <span>الشواحن</span></div>
+    <div class="page-banner">
+      <div class="page-banner-content">
+        <span class="page-banner-badge caps">ORIGINAL CHARGERS & POWER BANKS</span>
+        <h1 class="page-banner-title caps">قسم الشواحن الأصلية والباور بانك</h1>
+        <p class="page-banner-desc">شواحن آبل الأصلية 20W، شواحن Anker GaN السريعة، وباور بانك بضمان الوكيل.</p>
+      </div>
+      <i class="fas fa-plug page-banner-icon"></i>
+    </div>
+    <div class="grid" id="gridChargers"></div>
+  </section>
+
+  <!-- PAGE: CABLES -->
+  <section class="page" id="page-cables">
+    <div class="breadcrumb"><a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i> <span>الوصلات والكابلات</span></div>
+    <div class="page-banner">
+      <div class="page-banner-content">
+        <span class="page-banner-badge caps">CABLES & ADAPTERS</span>
+        <h1 class="page-banner-title caps">قسم الوصلات والكابلات الأصلية</h1>
+        <p class="page-banner-desc">كابلات شحن ونقل بيانات سريعة Type-C إلى Type-C، وكابلات آيفون Lightning، ووصلات تحويل صوتية معتمدة ضد القطع.</p>
+      </div>
+      <i class="fas fa-link page-banner-icon"></i>
+    </div>
+    <div class="grid" id="gridCables"></div>
+  </section>
+
+  <!-- PAGE: HEADPHONES -->
+  <section class="page" id="page-headphones">
+    <div class="breadcrumb"><a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i> <span>السماعات السلكية والرأس</span></div>
+    <div class="page-banner">
+      <div class="page-banner-content">
+        <span class="page-banner-badge caps">HEADSETS & AUDIO</span>
+        <h1 class="page-banner-title caps">قسم السماعات السلكية وسماعات الرأس</h1>
+        <p class="page-banner-desc">سماعات رأس عازلة للضوضاء ANC، سماعات أبل وسامسونج السلكية بمنفذ Type-C و 3.5mm، نقاء صوت استثنائي ومايكروفون واضح.</p>
+      </div>
+      <i class="fas fa-headphones page-banner-icon"></i>
+    </div>
+    <div class="grid" id="gridHeadphones"></div>
+  </section>
+
+  <!-- PAGE: AIRPODS -->
+  <section class="page" id="page-airpods">
+    <div class="breadcrumb"><a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i> <span>AIRPODS وسماعات البلوتوث</span></div>
+    <div class="page-banner">
+      <div class="page-banner-content">
+        <span class="page-banner-badge caps">AIRPODS & WIRELESS EARBUDS</span>
+        <h1 class="page-banner-title caps">قسم AIRPODS وسماعات البلوتوث اللاسلكية</h1>
+        <p class="page-banner-desc">سماعات AirPods Pro 2 الأصلية وسماعات سامسونج وJoyroom مع بطاريات طويلة، عزل ضوضاء حقيقي وتتبع حركة الرأس.</p>
+      </div>
+      <i class="fas fa-podcast page-banner-icon"></i>
+    </div>
+    <div class="grid" id="gridAirpods"></div>
+  </section>
+
+  <!-- PAGE: WATCHES -->
+  <section class="page" id="page-watches">
+    <div class="breadcrumb"><a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i> <span>الساعات الذكية</span></div>
+    <div class="page-banner">
+      <div class="page-banner-content">
+        <span class="page-banner-badge caps">SMART WATCHES</span>
+        <h1 class="page-banner-title caps">قسم الساعات الذكية والرياضية</h1>
+        <p class="page-banner-desc">أحدث ساعات Apple Watch وسامسونج وJoyroom لمتابعة الصحة والتمارين والرد على المكالمات وإشعارات الموبايل.</p>
+      </div>
+      <i class="fas fa-clock page-banner-icon"></i>
+    </div>
+    <div class="grid" id="gridWatches"></div>
+  </section>
+
+  <!-- PAGE: TRADE-IN -->
+  <section class="page" id="page-trade-in">
+    <div class="breadcrumb"><a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i> <span>حاسبة استبدال الموبايل القديم</span></div>
+    <div class="trade-in-card">
+      <div style="text-align:center;max-width:650px;margin:auto;">
+        <span class="hero-tag caps"><i class="fas fa-repeat"></i> استبدال كاش فوري بفرع فيصل</span>
+        <h2 style="font-size:1.6rem;color:var(--primary);margin:10px 0;">بدّل تليفونك القديم بجهاز جديد أو كاش فوراً</h2>
+        <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:20px;">
+          هات جهازك القديم إلى مقرنا بـ <strong>35 شارع المنشية - الطوابق - فيصل</strong>، وافحصه واستلم جهازك الجديد مع دفع أو استلام فرق السعر <strong>كاش فوري</strong>!
+        </p>
+
+        <div style="background:#f8fafc;padding:20px;border-radius:14px;border:1px solid var(--border);text-align:right;">
+          <form onsubmit="handleTradeInSubmit(event)">
+            <label>نوع وموديل جهازك القديم *</label>
+            <input type="text" id="tradeOldDevice" required placeholder="مثال: iPhone 12 Pro Max 128GB أو Oppo Reno 8">
+
+            <label>حالة الجهاز (البطارية والخدوش)</label>
+            <select id="tradeCondition">
+              <option>ممتاز بحالة الزيرو (بدون أي خدوش وبطارية ممتازة)</option>
+              <option>جيد جداً (استعمال خفيف)</option>
+              <option>متوسط (توجد خدوش أو تم تغيير بطارية)</option>
+            </select>
+
+            <label>الجهاز الجديد الذي ترغب في الاستبدال به *</label>
+            <input type="text" id="tradeNewDevice" required placeholder="مثال: iPhone 15 Pro Max أو Oppo Reno 12">
+
+            <label>رقم موبايلك للتواصل السريع *</label>
+            <input type="tel" id="tradePhone" required placeholder="مثال: 01115559809">
+
+            <button type="submit" class="btn-checkout" style="width:100%;background:var(--accent);">
+              <i class="fab fa-whatsapp"></i> احسب قيمة جهازك واستبدل عبر واتساب
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE: OFFERS -->
+  <section class="page" id="page-offers">
+    <div class="breadcrumb"><a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i> <span>عروض ملوك الكاش</span></div>
+    <div class="page-banner">
+      <div class="page-banner-content">
+        <span class="page-banner-badge caps">SPECIAL CASH OFFERS</span>
+        <h1 class="page-banner-title caps">عروض وتخفيضات ملوك الكاش</h1>
+        <p class="page-banner-desc">أقوى خصومات الكاش الحصرية لعملاء فيصل على الأجهزة والإكسسوارات مع شحن منزلي داخل فيصل.</p>
+      </div>
+      <i class="fas fa-fire page-banner-icon"></i>
+    </div>
+    <div class="grid" id="gridOffers"></div>
+  </section>
+
+  <!-- PAGE: BRANCHES -->
+  <section class="page" id="page-branches">
+    <div class="breadcrumb"><a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i> <span>عنوان الفرع ومعلومات التواصل</span></div>
+    <div class="info-card">
+      <h2 style="font-size:1.45rem;margin-bottom:15px;color:var(--primary);display:flex;align-items:center;gap:10px;">
+        <i class="fas fa-store" style="color:var(--accent)"></i> <span id="branchMainTitle">فرع فيصل الرئيسي (الجيزة)</span>
+      </h2>
+
+      <div style="font-size:1.02rem;display:flex;flex-direction:column;gap:14px;margin-bottom:22px;">
+        <div style="background:#fdf2f4;border:1.5px solid #fecdd3;padding:12px 16px;border-radius:10px;color:#9f1239;">
+          <i class="fas fa-circle-exclamation"></i> <strong>ملاحظة هامة:</strong>
+          <span>البيع <strong>كاش فوري فقط</strong> — التوصيل المنزلي متاح <strong>داخل فيصل فقط</strong> أو يمكنك تشريفنا بالاستلام والمعاينة المباشرة من الفرع.</span>
+        </div>
+
+        <p>
+          <i class="fas fa-location-dot" style="color:var(--accent);width:24px"></i>
+          <strong>العنوان بالتفصيل:</strong>
+          <span id="branchAddressText">35 شارع المنشية - الطوابق - فيصل، الجيزة.</span>
+        </p>
+
+        <p>
+          <i class="fas fa-clock" style="color:var(--accent);width:24px"></i>
+          <strong>مواعيد العمل:</strong>
+          <span id="branchHoursText">يومياً من الساعة 11:00 صباحاً حتى الساعة 12:00 منتصف الليل دون انقطاع.</span>
+        </p>
+
+        <p>
+          <i class="fab fa-whatsapp" style="color:var(--wa);width:24px"></i>
+          <strong>رقم الواتساب والمبيعات:</strong>
+          <span id="branchWaText">01115559809</span>
+        </p>
+
+        <p>
+          <i class="fas fa-phone" style="color:var(--green);width:24px"></i>
+          <strong>الاتصال المباشر:</strong>
+          <span id="branchCallText">01115559809</span>
+        </p>
+      </div>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a id="btnBranchWaDirect" class="btn-checkout" style="max-width:320px;" href="https://wa.me/201115559809?text=مرحباً، أريد الاستفسار عن عنوان فرع فيصل والأجهزة المتاحة حالياً" target="_blank">
+          <i class="fab fa-whatsapp"></i> تواصل مع الفرع عبر واتساب
+        </a>
+        <a class="btn-checkout" style="max-width:280px;background:#3b82f6" href="https://maps.google.com/?q=فيصل+الجيزة+شارع+المنشية" target="_blank">
+          <i class="fas fa-map-location-dot"></i> فتح خريطة الفرع (Google Maps)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE: SINGLE PRODUCT -->
+  <section class="page" id="page-product">
+    <div class="breadcrumb" id="productBreadcrumb"><a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i> <span>تفاصيل الجهاز</span></div>
+    <div id="productDetailContainer"></div>
+    <div class="section" style="margin-top:30px;">
+      <div class="section-header">
+        <h3 class="section-title">أجهزة أخرى مميزة بنفس القسم</h3>
+      </div>
+      <div class="grid" id="relatedProductsGrid"></div>
+    </div>
+  </section>
+
+  <!-- PAGE: CHECKOUT -->
+  <section class="page" id="page-checkout">
+    <div class="breadcrumb"><a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i> <span>إتمام الطلب والشحن (كاش فيصل فقط)</span></div>
+    <div class="info-card" style="max-width:680px;margin:auto;">
+      <h2 style="font-size:1.35rem;margin-bottom:8px;color:var(--primary);text-align:center;">
+        <i class="fas fa-truck" style="color:var(--accent)"></i> بيانات توصيل الطلب داخل فيصل (دفع كاش)
+      </h2>
+      <p style="text-align:center;font-size:0.85rem;color:var(--accent);font-weight:700;margin-bottom:18px;">
+        ⚠️ تنبيه: البيع كاش فوري فقط — الشحن متاح داخل منطقة فيصل فقط، أو استلام من فرع 35 شارع المنشية الطوابق.
+      </p>
+
+      <div id="checkoutSummaryBox" style="background:#f8fafc;padding:15px;border-radius:12px;border:1px solid var(--border);margin-bottom:20px;"></div>
+
+      <form onsubmit="handleSendOrder(event)">
+        <label>الاسم بالكامل *</label>
+        <input type="text" id="custName" required placeholder="مثال: محمد أحمد علي">
+
+        <label>رقم الموبايل (واتساب متاح عليه) *</label>
+        <input type="tel" id="custPhone" required placeholder="مثال: 01115559809">
+
+        <label>المنطقة داخل فيصل *</label>
+        <select id="custArea">
+          <option>شارع المنشية / الطوابق</option>
+          <option>العشرين / فيصل</option>
+          <option>حسن محمد / فيصل</option>
+          <option>المطبعة / فيصل</option>
+          <option>محطة المساحة / فيصل</option>
+          <option>ميدان الجيزة / أول فيصل</option>
+          <option>شارع الملك فيصل الرئيسي</option>
+          <option>استلام باليد من مقر الفرع (35 شارع المنشية)</option>
+        </select>
+
+        <label>العنوان بالتفصيل (اسم الشارع ورقم العمارة وعلامة مميزة) *</label>
+        <textarea id="custAddress" rows="3" required placeholder="اكتب العنوان بالتفصيل داخل فيصل لتسهيل وصول المندوب"></textarea>
+
+        <label>طريقة الدفع (كاش فوري فقط)</label>
+        <select id="custPayment">
+          <option>الدفع نقداً عند الاستلام (كاش فوري بعد الفحص)</option>
+          <option>دفع كاش فوري داخل الفرع (35 شارع المنشية الطوابق)</option>
+        </select>
+
+        <label>ملاحظات إضافية على الطلب</label>
+        <input type="text" id="custNotes" placeholder="أي تفاصيل خاصة بميعاد التوصيل أو اللون المطلوب">
+
+        <button type="submit" class="btn-checkout" style="margin-top:8px;">
+          <i class="fab fa-whatsapp"></i> إرسال الطلب فوراً ومشاركته عبر واتساب
+        </button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- 5. Cart Drawer -->
+<div class="overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3><i class="fas fa-shopping-bag"></i> <span id="txtCartTitle">سلة طلباتك (كاش)</span></h3>
+    <button class="close-drawer" onclick="closeCart()">&times;</button>
+  </div>
+  <div class="cart-items-body" id="cartItemsList"></div>
+  <div class="cart-footer">
+    <div class="summary-line">
+      <span id="txtSubtotalLabel">مجموع الأجهزة:</span>
+      <span id="drawerSubtotal">0 ج.م</span>
+    </div>
+    <div class="summary-line" style="color:var(--accent);font-size:0.85rem;">
+      <span id="txtDeliveryZone">نظام الدفع والتوصيل:</span>
+      <span>كاش فوري - فيصل فقط</span>
+    </div>
+    <div class="total-line">
+      <span id="txtTotalLabel">الإجمالي (كاش):</span>
+      <span id="drawerTotal">0 ج.م</span>
+    </div>
+    <button class="btn-checkout" onclick="proceedToCheckout()">
+      <span id="txtCheckoutBtn">متابعة الشراء وتأكيد الطلب</span> <i class="fas fa-arrow-left"></i>
+    </button>
+  </div>
+</div>
+
+<!-- 6. Floating WhatsApp Button -->
+<a id="floatingWaBtn" href="https://wa.me/201115559809" target="_blank" class="wa-float" title="تواصل واتساب مع فرع فيصل">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- 7. Mobile App Bottom Navigation Bar -->
+<div class="mobile-bottom-bar">
+  <div class="nav-tab active" id="tabHome" onclick="location.hash='#/'">
+    <i class="fas fa-house"></i>
+    <span class="t-nav-home">الرئيسية</span>
+  </div>
+  <div class="nav-tab" id="tabIphone" onclick="location.hash='#/brand/iphone'">
+    <i class="fab fa-apple"></i>
+    <span>IPHONE</span>
+  </div>
+  <div class="nav-tab" id="tabOppo" onclick="location.hash='#/brand/oppo'">
+    <i class="fas fa-mobile-screen"></i>
+    <span>OPPO</span>
+  </div>
+  <div class="nav-tab" id="tabTrade" onclick="location.hash='#/trade-in'">
+    <i class="fas fa-repeat"></i>
+    <span class="t-nav-trade">بدّل جهازك</span>
+  </div>
+  <div class="nav-tab" onclick="openCart()">
+    <i class="fas fa-bag-shopping"></i>
+    <span class="tab-badge" id="mobileCartCount">0</span>
+    <span id="txtMobileCart">السلة</span>
+  </div>
+</div>
+
+<!-- 8. Footer -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+        <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="4" width="92" height="92" rx="22" fill="#1e293b" stroke="#e11d48" stroke-width="4"/>
+          <rect x="29" y="16" width="42" height="68" rx="9" fill="none" stroke="#ffffff" stroke-width="5"/>
+          <path d="M54 31 L39 51 L49 51 L45 71 L61 48 L51 48 Z" fill="#d97706"/>
+        </svg>
+        <h3 id="footerStoreName" class="caps" style="margin:0;padding:0;">MAGIC PHONE STORE</h3>
+      </div>
+      <p style="font-size:0.88rem;line-height:1.7;color:#94a3b8" id="footerStoreDesc">
+        وجهتك الأولى في فيصل لأحدث أجهزة IPHONE و OPPO وسامسونج، والشواحن، الكابلات، السماعات، وإيربودز الأصلية 100%. البيع كاش فوري فقط والشحن المنزلي متاح داخل فيصل أو الاستلام المباشر من مقرنا بـ 35 شارع المنشية الطوابق.
+      </p>
+    </div>
+    <div>
+      <h3 class="caps t-footer-links-title">أقسام المتجر المخصصة</h3>
+      <ul>
+        <li><a href="#/brand/iphone" class="caps">هواتف IPHONE الأصلية</a></li>
+        <li><a href="#/brand/oppo" class="caps">هواتف OPPO وسلسلة RENO</a></li>
+        <li><a href="#/brand/samsung" class="caps">هواتف SAMSUNG GALAXY</a></li>
+        <li><a href="#/category/chargers" class="caps">الشواحن الأصلية والباور بانك</a></li>
+        <li><a href="#/category/cables" class="caps">الوصلات والكابلات المعتمدة</a></li>
+        <li><a href="#/category/airpods" class="caps">AIRPODS وسماعات البلوتوث</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="caps t-footer-contact-title">فروعنا والتواصل</h3>
+      <ul>
+        <li><i class="fas fa-location-dot" style="color:var(--accent)"></i> <span id="footerAddress">35 شارع المنشية - الطوابق - فيصل، الجيزة</span></li>
+        <li><i class="fab fa-whatsapp" style="color:var(--wa)"></i> <span id="footerWa">01115559809</span></li>
+        <li><i class="fas fa-phone" style="color:var(--gold)"></i> <span id="footerPhone">01115559809</span></li>
+        <li><i class="fas fa-money-bill-wave" style="color:var(--green)"></i> <strong>بيع كاش فوري فقط — توصيل داخل فيصل</strong></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy caps">
+    ALL RIGHTS RESERVED © 2026 <span id="footerCopyName">MAGIC PHONE STORE</span> | 35 EL-MANSHIYA ST. - FAISAL
+  </div>
+</footer>
+
+<!-- ================== SCRIPT & APPLICATION LOGIC ================== -->
+<script>
+/* ================== 1. إعدادات المتجر والمنتجات (عدّل الأسعار والمنتجات من هنا بسهولة) ================== */
+const siteSettings = {
+  waNumber: "201115559809",
+  phoneCall: "01115559809",
+  logoMain: "MAGIC",
+  logoSub: "PHONE STORE",
+  address: "35 شارع المنشية - الطوابق - فيصل، الجيزة"
+};
+
+const products = [
+  // 1. IPHONE
+  {
+    id: 201,
+    name: "APPLE IPHONE 15 PRO MAX 256GB تيتانيوم طبيعي",
+    brand: "Apple",
+    category: "iphone",
+    price: 61500,
+    oldPrice: 65000,
+    discount: "وفر 3500 ج.م",
+    image: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&auto=format&fit=crop&q=80",
+    desc: "شريحة A17 Pro الخارقة، شاشة 6.7 إنش Super Retina XDR مع ProMotion 120Hz، كاميرا 48MP مع تقريب 5x، هيكل تيتانيوم متين.",
+    isOffer: true
+  },
+  {
+    id: 202,
+    name: "APPLE IPHONE 14 128GB أسود فلكي (أصلي بفرع فيصل)",
+    brand: "Apple",
+    category: "iphone",
+    price: 33500,
+    oldPrice: 35500,
+    discount: "وفر 2000 ج.م",
+    image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600&auto=format&fit=crop&q=80",
+    desc: "شريحة A15 Bionic، شاشة 6.1 إنش OLED، بطارية تدوم طوال اليوم مع نمط سينمائي متطور بدقة 4K.",
+    isOffer: true
+  },
+  {
+    id: 203,
+    name: "APPLE IPHONE 13 128GB ستارلايت أبيض",
+    brand: "Apple",
+    category: "iphone",
+    price: 28500,
+    oldPrice: 30000,
+    discount: "عرض كاش",
+    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+    desc: "أقوى هاتف قيمة مقابل سعر من آبل، كاميرا مزدوجة عريضة مع بطارية ممتازة وشاشة ساطعة.",
+    isOffer: false
+  },
+
+  // 2. OPPO
+  {
+    id: 204,
+    name: "OPPO RENO 12 PRO 5G سعة 512GB / 12GB RAM",
+    brand: "Oppo",
+    category: "oppo",
+    price: 24500,
+    oldPrice: 26500,
+    discount: "وفر 2000 ج.م",
+    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop&q=80",
+    desc: "تصميم متين ومقاوم للصدمات، شاشة منحنية AMOLED 120Hz، شحن SuperVOOC 80W وكاميرات ذكاء اصطناعي احترافية.",
+    isOffer: true
+  },
+  {
+    id: 205,
+    name: "OPPO RENO 11 5G سعة 256GB أخضر مموج",
+    brand: "Oppo",
+    category: "oppo",
+    price: 18500,
+    oldPrice: 20000,
+    discount: "خصم 1500 ج.م",
+    image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=80",
+    desc: "خبير البورتريه مع كاميرا تليفوتو 32MP، شاشة فائقة الوضوح وشحن فائق السرعة 67W.",
+    isOffer: true
+  },
+  {
+    id: 206,
+    name: "OPPO A78 سعة 256GB / 8GB RAM أسود لامع",
+    brand: "Oppo",
+    category: "oppo",
+    price: 9400,
+    oldPrice: 10200,
+    discount: "خصم 800 ج.م",
+    image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop&q=80",
+    desc: "شاشة AMOLED 90Hz، سماعات ستيريو ثنائية، بطارية 5000mAh وشحن سريع 67W.",
+    isOffer: false
+  },
+
+  // 3. SAMSUNG
+  {
+    id: 207,
+    name: "SAMSUNG GALAXY S24 ULTRA 512GB رمادي تيتانيوم",
+    brand: "Samsung",
+    category: "samsung",
+    price: 53500,
+    oldPrice: 57000,
+    discount: "وفر 3500 ج.م",
+    image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=600&auto=format&fit=crop&q=80",
+    desc: "معالج الذكاء الاصطناعي Galaxy AI، كاميرا 200MP فائقة الدقة، قلم S Pen مدمج وشاشة مقاومة للانعكاس.",
+    isOffer: true
+  },
+  {
+    id: 208,
+    name: "SAMSUNG GALAXY A55 5G سعة 256GB / 8GB RAM",
+    brand: "Samsung",
+    category: "samsung",
+    price: 19800,
+    oldPrice: 21500,
+    discount: "وفر 1700 ج.م",
+    image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&auto=format&fit=crop&q=80",
+    desc: "إطار معدني فاخر، شاشة Super AMOLED 120Hz، مقاومة للماء والغبار IP67 وحماية أمان Samsung Knox Vault.",
+    isOffer: true
+  },
+
+  // 4. XIAOMI
+  {
+    id: 209,
+    name: "XIAOMI REDMI NOTE 13 PRO 5G سعة 256GB",
+    brand: "Xiaomi",
+    category: "xiaomi",
+    price: 13900,
+    oldPrice: 15200,
+    discount: "خصم 1300 ج.م",
+    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop&q=80",
+    desc: "كاميرا خارقة بدقة 200MP مع OIS، شحن توربو 67W، وشاشة AMOLED 120Hz فائقة الحواف.",
+    isOffer: false
+  },
+
+  // 5. CHARGERS
+  {
+    id: 210,
+    name: "ANKER 737 POWER BANK 24,000MAH بقوة 140W",
+    brand: "Anker",
+    category: "chargers",
+    price: 4950,
+    oldPrice: 5600,
+    discount: "وفر 650 ج.م",
+    image: "https://images.unsplash.com/photo-1609592424109-dd9892f1b177?w=600&auto=format&fit=crop&q=80",
+    desc: "شحن فائق السرعة للابتوب والموبايل مع شاشة ديجيتال ذكية توضح نسبة الشحن وقوة الخرج بدقة.",
+    isOffer: true
+  },
+  {
+    id: 211,
+    name: "ANKER 313 CHARGER 45W GAN فائق السرعة",
+    brand: "Anker",
+    category: "chargers",
+    price: 1100,
+    oldPrice: 1350,
+    discount: "عرض كاش",
+    image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600&auto=format&fit=crop&q=80",
+    desc: "يدعم الشحن فائق السرعة 2.0 لهواتف سامسونج والآيفون مع تقنية GaN لحماية الأجهزة من الحرارة.",
+    isOffer: false
+  },
+  {
+    id: 212,
+    name: "APPLE 20W USB-C POWER ADAPTER شاحن آبل الأصلي",
+    brand: "Apple",
+    category: "chargers",
+    price: 950,
+    oldPrice: 1150,
+    discount: "أصلي 100%",
+    image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600&auto=format&fit=crop&q=80",
+    desc: "رأس شاحن آبل الأصلي 20W مبرشم بالباركود يدعم الشحن السريع لجميع هواتف الآيفون والآيباد.",
+    isOffer: true
+  },
+
+  // 6. CABLES
+  {
+    id: 213,
+    name: "ANKER POWERLINE III USB-C TO USB-C 100W كابل",
+    brand: "Anker",
+    category: "cables",
+    price: 450,
+    oldPrice: 550,
+    discount: "قوة فائقة",
+    image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600&auto=format&fit=crop&q=80",
+    desc: "كابل معتمد فائق المتانة يتحمل أكثر من 25 ألف انحناء، يدعم الشحن السريع حتى 100W ونقل البيانات.",
+    isOffer: false
+  },
+  {
+    id: 214,
+    name: "APPLE ORIGINAL USB-C TO LIGHTNING CABLE 1M",
+    brand: "Apple",
+    category: "cables",
+    price: 650,
+    oldPrice: 800,
+    discount: "أصلي معتمد",
+    image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600&auto=format&fit=crop&q=80",
+    desc: "كابل آبل الأصلي لشحن الآيفون بسرعة وأمان وحماية البطارية من التلف.",
+    isOffer: true
+  },
+  {
+    id: 215,
+    name: "JOYROOM TYPE-C TO 3.5MM وصلة تحويل سماعات",
+    brand: "Joyroom",
+    category: "cables",
+    price: 250,
+    oldPrice: 350,
+    discount: "صوت نقي DAC",
+    image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600&auto=format&fit=crop&q=80",
+    desc: "شريحة DAC مدمجة لنقل الصوت بنقاء عالي بدون أي تشويش لجميع هواتف سامسونج وآبل وأوبو.",
+    isOffer: false
+  },
+
+  // 7. HEADPHONES
+  {
+    id: 216,
+    name: "ANKER SOUNDCORE LIFE Q30 عازلة للضوضاء",
+    brand: "Anker",
+    category: "headphones",
+    price: 3600,
+    oldPrice: 4200,
+    discount: "وفر 600 ج.م",
+    image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&auto=format&fit=crop&q=80",
+    desc: "صوت Hi-Res معتمد، 3 أوضاع لعزل الضوضاء الهجين، بطارية تدوم حتى 40 ساعة ووسادات أذن ميموري فوم.",
+    isOffer: true
+  },
+  {
+    id: 217,
+    name: "APPLE EARPODS (USB-C) سماعة أبل السلكية الأصلية",
+    brand: "Apple",
+    category: "headphones",
+    price: 1150,
+    oldPrice: 1350,
+    discount: "صوت محيطي",
+    image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&auto=format&fit=crop&q=80",
+    desc: "منفذ Type-C متوافق مع آيفون 15 وسامسونج، مايكروفون عالي الوضوح وتحكم بمستوى الصوت.",
+    isOffer: false
+  },
+
+  // 8. AIRPODS
+  {
+    id: 218,
+    name: "APPLE AIRPODS PRO الجيل الثاني (TYPE-C)",
+    brand: "Apple",
+    category: "airpods",
+    price: 10200,
+    oldPrice: 11500,
+    discount: "خصم 12%",
+    image: "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600&auto=format&fit=crop&q=80",
+    desc: "عزل ضوضاء مضاعف، صوت مكاني مخصص مع تتبع حركة الرأس، وعلبة شحن MagSafe بمنفذ USB-C.",
+    isOffer: true
+  },
+  {
+    id: 219,
+    name: "JOYROOM JR-T03S PRO اللاسلكية مع عزل نشط",
+    brand: "Joyroom",
+    category: "airpods",
+    price: 1350,
+    oldPrice: 1650,
+    discount: "وفر 300 ج.م",
+    image: "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600&auto=format&fit=crop&q=80",
+    desc: "شحن لاسلكي، عزل ضوضاء حقيقي، تدعم البوب أب على الآيفون والاتصال التلقائي.",
+    isOffer: true
+  },
+
+  // 9. WATCHES
+  {
+    id: 220,
+    name: "APPLE WATCH ULTRA 2 مقاس 49MM سوار تيتانيوم",
+    brand: "Apple",
+    category: "watches",
+    price: 36900,
+    oldPrice: 39500,
+    discount: "عرض كاش",
+    image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=80",
+    desc: "أقوى ساعة ذكية للمغامرات والرياضات، شاشة ساطعة حتى 3000 شمعة وهيكل تيتانيوم عسكري.",
+    isOffer: true
+  },
+  {
+    id: 221,
+    name: "SAMSUNG GALAXY WATCH 6 CLASSIC مقاس 47MM",
+    brand: "Samsung",
+    category: "watches",
+    price: 12900,
+    oldPrice: 14500,
+    discount: "خصم 11%",
+    image: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&auto=format&fit=crop&q=80",
+    desc: "إطار دوار كلاسيكي، شاشة كريستال ياقوتي مضادة للخدش، تتبع الصحة وتخطيط القلب.",
+    isOffer: true
+  }
+];
+
+let cart = JSON.parse(localStorage.getItem("magic_cart_db") || "[]");
+let currentLang = localStorage.getItem("magic_lang_db") || "ar";
+
+/* ================== Multi-Language Dictionary ================== */
+const dict = {
+  ar: {
+    langBtn: "ENGLISH",
+    navHome: "الرئيسية",
+    navChargers: "الشواحن",
+    navCables: "الوصلات والكابلات",
+    navHeadphones: "السماعات",
+    navWatches: "الساعات",
+    navTrade: "بدّل جهازك",
+    navOffers: "عروض الكاش",
+    navFaisal: "فرع فيصل",
+    pillAll: "كل الأقسام",
+    cartLabel: "السلة",
+    secBest: "الأجهزة الأكثر طلباً في فرع فيصل",
+    addCart: "أضف للسلة",
+    waQuick: "طلب فوري واتساب",
+    waShare: "مشاركة على واتساب",
+    availableFaisal: "متوفر بفرع فيصل",
+    currSymbol: "ج.م",
+    cashOnlyNote: "بيع كاش فوري فقط (لا يوجد تقسيط)"
+  },
+  en: {
+    langBtn: "العربية",
+    navHome: "HOME",
+    navChargers: "CHARGERS",
+    navCables: "CABLES",
+    navHeadphones: "HEADPHONES",
+    navWatches: "WATCHES",
+    navTrade: "TRADE-IN",
+    navOffers: "CASH OFFERS",
+    navFaisal: "FAISAL BRANCH",
+    pillAll: "ALL CATEGORIES",
+    cartLabel: "CART",
+    secBest: "BEST SELLERS IN FAISAL",
+    addCart: "ADD TO CART",
+    waQuick: "ORDER VIA WHATSAPP",
+    waShare: "SHARE TO WHATSAPP",
+    availableFaisal: "IN STOCK AT FAISAL",
+    currSymbol: "EGP",
+    cashOnlyNote: "INSTANT CASH ONLY (NO INSTALLMENTS)"
+  }
+};
+
+function money(val) {
+  const d = dict[currentLang] || dict.ar;
+  return Number(val || 0).toLocaleString(currentLang === "en" ? "en-US" : "ar-EG") + " " + d.currSymbol;
+}
+
+/* ================== Language Switcher ================== */
+function toggleLanguage() {
+  currentLang = currentLang === "ar" ? "en" : "ar";
+  localStorage.setItem("magic_lang_db", currentLang);
+  applyLanguage();
+}
+
+function applyLanguage() {
+  const isEn = currentLang === "en";
+  document.documentElement.setAttribute("dir", isEn ? "ltr" : "rtl");
+  document.documentElement.setAttribute("lang", isEn ? "en" : "ar");
+
+  const d = dict[currentLang];
+  document.getElementById("langBtnText").innerText = d.langBtn;
+  document.getElementById("cartLabelText").innerText = d.cartLabel;
+
+  document.querySelectorAll(".t-nav-home").forEach(el => el.innerText = d.navHome);
+  document.querySelectorAll(".t-nav-chargers").forEach(el => el.innerText = d.navChargers);
+  document.querySelectorAll(".t-nav-cables").forEach(el => el.innerText = d.navCables);
+  document.querySelectorAll(".t-nav-headphones").forEach(el => el.innerText = d.navHeadphones);
+  document.querySelectorAll(".t-nav-watches").forEach(el => el.innerText = d.navWatches);
+  document.querySelectorAll(".t-nav-trade").forEach(el => el.innerText = d.navTrade);
+  document.querySelectorAll(".t-nav-offers").forEach(el => el.innerText = d.navOffers);
+  document.querySelectorAll(".t-nav-faisal").forEach(el => el.innerText = d.navFaisal);
+  document.querySelectorAll(".t-pill-all").forEach(el => el.innerText = d.pillAll);
+
+  const secBest = document.querySelector(".t-sec-bestsellers");
+  if (secBest) secBest.innerText = d.secBest;
+
+  const viewAll = document.querySelector(".t-view-all");
+  if (viewAll) viewAll.innerHTML = isEn ? `VIEW ALL <i class="fas fa-arrow-right"></i>` : `عرض كافة المنتجات <i class="fas fa-arrow-left"></i>`;
+
+  renderAllGrids();
+}
+
+/* ================== Product Card HTML ================== */
+function createProductCardHTML(p) {
+  const d = dict[currentLang] || dict.ar;
+  return `
+  <div class="product-card" data-product-id="${p.id}">
+    ${p.discount ? `<span class="card-badge caps">${p.discount}</span>` : ""}
+    <span class="stock-pill"><i class="fas fa-check"></i> ${d.availableFaisal}</span>
+    
+    <div class="product-img-wrap" onclick="location.hash='#/product/${p.id}'">
+      <img src="${p.image || 'https://via.placeholder.com/300'}" alt="${p.name}" loading="lazy">
+    </div>
+
+    <div class="product-brand caps">${p.brand || 'MAGIC'}</div>
+    <a href="#/product/${p.id}" class="product-name caps" title="${p.name}">${p.name}</a>
+
+    <div class="price-row">
+      <span class="current-price">${money(p.price)}</span>
+      ${p.oldPrice ? `<span class="old-price">${money(p.oldPrice)}</span>` : ""}
+    </div>
+
+    <div class="cash-only-note">
+      <i class="fas fa-money-bill-wave" style="color:var(--green)"></i>
+      ${d.cashOnlyNote}
+    </div>
+
+    <div class="card-actions">
+      <button class="btn-add-cart caps" onclick="addToCart(${p.id})">
+        <i class="fas fa-cart-plus"></i> ${d.addCart}
+      </button>
+      <button class="btn-quick-wa caps" onclick="buyViaWhatsAppNow(${p.id})">
+        <i class="fab fa-whatsapp"></i> ${d.waQuick}
+      </button>
+      <button class="btn-share-wa caps" onclick="shareProductOnWhatsApp(${p.id})" title="مشاركة على واتساب">
+        <i class="fas fa-share-nodes"></i> ${d.waShare}
+      </button>
+    </div>
+  </div>`;
+}
+
+function shareProductOnWhatsApp(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  const shareText = 
+`*📱 شوف الجهاز ده من متجر MAGIC PHONE STORE (فرع فيصل):*
+*${p.name}*
+💰 السعر (كاش فوري): ${money(p.price)}
+📍 متاح استلام من 35 شارع المنشية الطوابق فيصل، أو شحن منزلي داخل فيصل!`;
+  window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, "_blank");
+}
+
+function renderAllGrids() {
+  const homeGrid = document.getElementById("homeBestSellersGrid");
+  if (homeGrid) homeGrid.innerHTML = products.slice(0, 8).map(createProductCardHTML).join("");
+
+  renderCategoryGrid("iphone", "gridIphone");
+  renderCategoryGrid("oppo", "gridOppo");
+  renderCategoryGrid("samsung", "gridSamsung");
+  renderCategoryGrid("xiaomi", "gridXiaomi");
+  renderCategoryGrid("chargers", "gridChargers");
+  renderCategoryGrid("cables", "gridCables");
+  renderCategoryGrid("headphones", "gridHeadphones");
+  renderCategoryGrid("airpods", "gridAirpods");
+  renderCategoryGrid("watches", "gridWatches");
+
+  const offersGrid = document.getElementById("gridOffers");
+  if (offersGrid) {
+    const list = products.filter(p => p.isOffer);
+    offersGrid.innerHTML = list.length ? list.map(createProductCardHTML).join("") : `<p style="grid-column:1/-1;text-align:center;padding:30px">لا توجد عروض حالياً.</p>`;
+  }
+
+  updateCartCounters();
+}
+
+function renderCategoryGrid(catKey, containerId) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  const list = products.filter(p => p.category === catKey);
+  el.innerHTML = list.length
+    ? list.map(createProductCardHTML).join("")
+    : `<p style="grid-column:1/-1;text-align:center;padding:35px;color:var(--text-muted)">لا توجد منتجات مسجلة في هذا القسم بعد.</p>`;
+}
+
+function handleSearch() {
+  const query = (document.getElementById("searchInput").value || "").trim().toLowerCase();
+  if (!query) {
+    renderAllGrids();
+    return;
+  }
+  const matched = products.filter(p => 
+    p.name.toLowerCase().includes(query) || 
+    (p.brand && p.brand.toLowerCase().includes(query)) || 
+    (p.desc && p.desc.toLowerCase().includes(query))
+  );
+
+  const homeGrid = document.getElementById("homeBestSellersGrid");
+  if (homeGrid) {
+    homeGrid.innerHTML = matched.length
+      ? matched.map(createProductCardHTML).join("")
+      : `<p style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted)">لم يتم العثور على أجهزة مطابقة للبحث "${query}".</p>`;
+  }
+  showPage("home");
+}
+
+function renderProductDetailPage(id) {
+  const p = products.find(x => x.id === id);
+  const container = document.getElementById("productDetailContainer");
+  const breadcrumb = document.getElementById("productBreadcrumb");
+  const relatedGrid = document.getElementById("relatedProductsGrid");
+
+  if (!p) {
+    container.innerHTML = `<p style="text-align:center;padding:50px">المنتج غير موجود.</p>`;
+    return;
+  }
+
+  breadcrumb.innerHTML = `
+    <a href="#/">الرئيسية</a> <i class="fas fa-chevron-left"></i>
+    <a href="#/${p.category}" class="caps">${p.category}</a> <i class="fas fa-chevron-left"></i>
+    <span class="caps">${p.name}</span>
+  `;
+
+  container.innerHTML = `
+  <div class="product-detail-layout">
+    <div class="product-gallery">
+      <img src="${p.image || 'https://via.placeholder.com/400'}" alt="${p.name}">
+    </div>
+
+    <div>
+      <span class="card-badge caps" style="position:static;display:inline-block;margin-bottom:8px;">${p.brand || 'MAGIC STORE'}</span>
+      <h1 class="caps" style="font-size:1.6rem;color:var(--primary);margin-bottom:12px;line-height:1.4;">${p.name}</h1>
+      
+      <div class="price-row" style="margin-bottom:16px;">
+        <span class="current-price" style="font-size:1.75rem;">${money(p.price)}</span>
+        ${p.oldPrice ? `<span class="old-price" style="font-size:1.15rem;">${money(p.oldPrice)}</span>` : ""}
+      </div>
+
+      <div class="cash-only-note" style="max-width:360px;margin-bottom:20px;font-size:0.88rem;padding:8px 12px;">
+        <i class="fas fa-money-bill-wave" style="color:var(--green);font-size:1rem;"></i>
+        نظام البيع: <strong>كاش فوري فقط (لا يوجد تقسيط)</strong>
+      </div>
+
+      <p style="color:#475569;line-height:1.8;margin-bottom:20px;font-size:0.95rem;">
+        ${p.desc || 'جهاز أصلي 100% مع ضمان تشغيل واستبدال معتمد من فرع فيصل بـ 35 شارع المنشية الطوابق.'}
+      </p>
+
+      <ul class="product-specs-list">
+        <li><i class="fas fa-money-bill-wave"></i> الدفع كاش فوري عند الاستلام أو داخل الفرع</li>
+        <li><i class="fas fa-truck-fast"></i> التوصيل المنزلي متاح داخل منطقة فيصل فقط والدفع بعد المعاينة</li>
+        <li><i class="fas fa-store"></i> متاح للمعاينة والتجربة الفورية بفرع 35 شارع المنشية الطوابق فيصل</li>
+        <li><i class="fas fa-shield-halved"></i> ضمان معتمد وفاتورة شراء رسمية لضمان حقك</li>
+      </ul>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;">
+        <button class="btn-add-cart caps" style="flex:1;padding:14px;font-size:1rem;" onclick="addToCart(${p.id})">
+          <i class="fas fa-cart-plus"></i> أضف إلى السلة
+        </button>
+        <button class="btn-checkout caps" style="flex:1;padding:14px;font-size:1rem;" onclick="buyViaWhatsAppNow(${p.id})">
+          <i class="fab fa-whatsapp"></i> طلب كاش عبر واتساب
+        </button>
+      </div>
+
+      <div style="margin-top:12px;">
+        <button class="btn-share-wa caps" style="width:100%;padding:10px;" onclick="shareProductOnWhatsApp(${p.id})">
+          <i class="fas fa-share-nodes"></i> مشاركة تفاصيل هذا الجهاز على واتساب
+        </button>
+      </div>
+    </div>
+  </div>`;
+
+  const related = products.filter(x => x.category === p.category && x.id !== p.id).slice(0, 4);
+  relatedGrid.innerHTML = related.length
+    ? related.map(createProductCardHTML).join("")
+    : `<p style="grid-column:1/-1;text-align:center;color:var(--text-muted)">لا توجد منتجات إضافية في هذا القسم حالياً.</p>`;
+}
+
+/* ================== Router & Multi-Page View ================== */
+function showPage(pageId) {
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  const target = document.getElementById("page-" + pageId);
+  if (target) target.classList.add("active");
+
+  document.querySelectorAll(".desktop-nav a").forEach(a => a.classList.remove("active"));
+  const navLink = document.getElementById("nav-" + pageId);
+  if (navLink) navLink.classList.add("active");
+
+  document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
+  if (pageId === "home") document.getElementById("tabHome").classList.add("active");
+  if (pageId === "iphone") document.getElementById("tabIphone").classList.add("active");
+  if (pageId === "oppo") document.getElementById("tabOppo").classList.add("active");
+  if (pageId === "trade-in") document.getElementById("tabTrade").classList.add("active");
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function handleRoute() {
+  const hash = location.hash || "#/";
+  const clean = hash.replace("#/", "").replace("#", "");
+  const parts = clean.split("/");
+
+  const page = parts[0];
+  const param = parts[1];
+
+  if (page === "product" && param) {
+    renderProductDetailPage(Number(param));
+    showPage("product");
+    return;
+  }
+
+  if (page === "brand" && param) { showPage(param); return; }
+  if (page === "category" && param) { showPage(param); return; }
+
+  const validPages = ["iphone", "oppo", "samsung", "xiaomi", "chargers", "cables", "headphones", "airpods", "watches", "trade-in", "offers", "branches"];
+  if (validPages.includes(page)) {
+    showPage(page);
+    return;
+  }
+
+  if (page === "checkout") {
+    renderCheckoutSummary();
+    showPage("checkout");
+    return;
+  }
+
+  showPage("home");
+}
+
+/* ================== Instant WhatsApp Orders ================== */
+function buyViaWhatsAppNow(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  const msg = 
+`*🛍️ طلب شراء جهاز (كاش فوري) من MAGIC PHONE STORE*
+-----------------------------------
+📱 *اسم الجهاز:* ${p.name}
+💰 *السعر المطلوب (كاش):* ${money(p.price)}
+📍 *مكان الاستلام:* توصيل داخل فيصل أو استلام من فرع 35 شارع المنشية الطوابق.
+
+من فضلك وضح لي ميعاد الاستلام والتوصيل.`;
+  window.open(`https://wa.me/${siteSettings.waNumber}?text=${encodeURIComponent(msg)}`, "_blank");
+}
+
+function handleSendOrder(e) {
+  e.preventDefault();
+  if (!cart.length) {
+    alert("السلة فارغة حالياً.");
+    return;
+  }
+
+  const name = document.getElementById("custName").value.trim();
+  const phone = document.getElementById("custPhone").value.trim();
+  const area = document.getElementById("custArea").value;
+  const address = document.getElementById("custAddress").value.trim();
+  const payment = document.getElementById("custPayment").value;
+  const notes = document.getElementById("custNotes").value.trim();
+
+  let total = 0;
+  let itemsText = "";
+  cart.forEach((item, index) => {
+    const sum = item.price * item.qty;
+    total += sum;
+    itemsText += `${index + 1}) *${item.name}* | العدد: ${item.qty} | السعر: ${money(sum)}\n`;
+  });
+
+  const orderMsg = 
+`*🛍️ طلب جديد (كاش فوري) من متجر MAGIC PHONE STORE*
+-----------------------------------
+*بيانات العميل:*
+👤 الاسم: ${name}
+📞 الموبايل: ${phone}
+📍 المنطقة بفيصل: ${area}
+🏠 العنوان بالتفصيل: ${address}
+💳 طريقة الدفع: ${payment}
+${notes ? `📝 ملاحظات: ${notes}\n` : ""}
+-----------------------------------
+*الأجهزة والطلبات:*
+${itemsText}
+-----------------------------------
+*المجموع الإجمالي (كاش):* ${money(total)}
+*(البيع كاش فوري فقط — التوصيل داخل فيصل أو استلام بـ 35 شارع المنشية)*`;
+
+  window.open(`https://wa.me/${siteSettings.waNumber}?text=${encodeURIComponent(orderMsg)}`, "_blank");
+  
+  cart = [];
+  saveCart();
+  alert("تم تجهيز الطلب! جاري تحويلك لمحادثة واتساب المتجر لتأكيد الاستلام.");
+  location.hash = "#/";
+}
+
+/* ================== Trade-In Submission via WhatsApp ================== */
+function handleTradeInSubmit(e) {
+  e.preventDefault();
+  const oldDev = document.getElementById("tradeOldDevice").value.trim();
+  const cond = document.getElementById("tradeCondition").value;
+  const newDev = document.getElementById("tradeNewDevice").value.trim();
+  const phone = document.getElementById("tradePhone").value.trim();
+
+  const tradeMsg = 
+`*🔄 استفسار عن تبديل موبايل قديم بجديد (كاش فوري - فرع فيصل)*
+-----------------------------------
+📱 *جهازي القديم:* ${oldDev}
+🔍 *حالة الجهاز:* ${cond}
+✨ *الجهاز الجديد المطلوب:* ${newDev}
+📞 *رقم هاتفي:* ${phone}
+📍 *الفرع:* 35 شارع المنشية الطوابق - فيصل
+
+من فضلك وضح لي القيمة التقديرية لجهازي القديم وفرق السعر كاش.`;
+
+  window.open(`https://wa.me/${siteSettings.waNumber}?text=${encodeURIComponent(tradeMsg)}`, "_blank");
+}
+
+/* ================== Cart Drawer Operations ================== */
+function addToCart(id) {
+  const p = products.find(x => x.id === id);
+  if (!p) return;
+  const item = cart.find(x => x.id === id);
+  if (item) {
+    item.qty++;
+  } else {
+    cart.push({ ...p, qty: 1 });
+  }
+  saveCart();
+  openCart();
+}
+
+function changeQty(id, delta) {
+  const item = cart.find(x => x.id === id);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) {
+    cart = cart.filter(x => x.id !== id);
+  }
+  saveCart();
+  renderCartDrawer();
+}
+
+function saveCart() {
+  localStorage.setItem("magic_cart_db", JSON.stringify(cart));
+  updateCartCounters();
+}
+
+function updateCartCounters() {
+  const totalCount = cart.reduce((acc, item) => acc + item.qty, 0);
+  document.getElementById("cartCount").innerText = totalCount;
+  document.getElementById("mobileCartCount").innerText = totalCount;
+}
+
+function openCart() {
+  renderCartDrawer();
+  document.getElementById("cartDrawer").classList.add("open");
+  document.getElementById("cartOverlay").classList.add("active");
+}
+
+function closeCart() {
+  document.getElementById("cartDrawer").classList.remove("open");
+  document.getElementById("cartOverlay").classList.remove("active");
+}
+
+function renderCartDrawer() {
+  const listEl = document.getElementById("cartItemsList");
+  if (!cart.length) {
+    listEl.innerHTML = `
+      <div style="text-align:center;padding:50px 20px;color:var(--text-muted)">
+        <i class="fas fa-bag-shopping" style="font-size:3.5rem;color:#cbd5e1;margin-bottom:12px;"></i>
+        <h4>سلة المشتريات فارغة</h4>
+        <p style="font-size:0.85rem;margin-top:6px;">تصفح أقسام الأجهزة وأضف طلباتك هنا</p>
+      </div>`;
+    document.getElementById("drawerSubtotal").innerText = money(0);
+    document.getElementById("drawerTotal").innerText = money(0);
+    return;
+  }
+
+  let subtotal = 0;
+  listEl.innerHTML = cart.map(item => {
+    const itemTotal = item.price * item.qty;
+    subtotal += itemTotal;
+    return `
+    <div class="cart-row">
+      <img src="${item.image || 'https://via.placeholder.com/100'}" class="cart-row-img" alt="${item.name}">
+      <div class="cart-row-info">
+        <div class="cart-row-title caps">${item.name}</div>
+        <div class="cart-row-price">${money(itemTotal)}</div>
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="changeQty(${item.id}, -1)">-</button>
+          <span class="qty-val">${item.qty}</span>
+          <button class="qty-btn" onclick="changeQty(${item.id}, 1)">+</button>
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+
+  document.getElementById("drawerSubtotal").innerText = money(subtotal);
+  document.getElementById("drawerTotal").innerText = money(subtotal);
+}
+
+function proceedToCheckout() {
+  if (!cart.length) {
+    alert("سلة التسوق فارغة.");
+    return;
+  }
+  closeCart();
+  location.hash = "#/checkout";
+}
+
+function renderCheckoutSummary() {
+  const box = document.getElementById("checkoutSummaryBox");
+  if (!cart.length) {
+    box.innerHTML = `<p style="text-align:center;color:var(--text-muted)">السلة فارغة حالياً.</p>`;
+    return;
+  }
+  let total = 0;
+  let html = `<h4 style="margin-bottom:10px;color:var(--primary);"><i class="fas fa-receipt"></i> الأجهزة المختارة (دفع كاش):</h4>`;
+  cart.forEach(item => {
+    const sum = item.price * item.qty;
+    total += sum;
+    html += `
+      <div style="display:flex;justify-content:space-between;font-size:0.88rem;margin-bottom:6px;border-bottom:1px dashed var(--border);padding-bottom:4px;">
+        <span class="caps">${item.name} (×${item.qty})</span>
+        <span style="font-weight:800">${money(sum)}</span>
+      </div>
+    `;
+  });
+  html += `
+    <div style="display:flex;justify-content:space-between;font-weight:900;color:var(--accent);font-size:1.15rem;margin-top:10px;">
+      <span>المجموع الإجمالي (كاش):</span>
+      <span>${money(total)}</span>
+    </div>
+  `;
+  box.innerHTML = html;
+}
+
+/* ================== Initialize Store ================== */
+window.addEventListener("hashchange", handleRoute);
+window.addEventListener("DOMContentLoaded", () => {
+  applyLanguage();
+  handleRoute();
+});
+</script>
+</body>
+</html>
